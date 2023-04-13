@@ -20,7 +20,7 @@ The sentiment labels are:
 
 The bar chart below visualizes the distribution of sentiment labels in our training data. We can see that the sentiment label with the most rows in our training data is neutral, while the two extremes, negative and positive reviews, appear the least number of times.
 
-(insert image here)
+![alt text](https://github.com/nerobero/DS4400-Sentiment-Analysis-Project/blob/main/data_distribution.png)
 
 We began by reading the training and testing data from the tsv files and named them train_data and test_data, respectively. Then we split the train_data into testing and validation sets and plan to use the multi-class classification models listed above. After training each model, predictions are made using the test_data and put through different metrics with predictions made using the validation set. 
 
