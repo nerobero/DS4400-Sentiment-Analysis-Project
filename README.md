@@ -42,6 +42,8 @@ KNN:
 n_neighbors=5, metric='euclidean'
 
 Decision Tree: 
+First, we trained a decision tree model without pruning conditions set. Then we performed cross-validation on max_depth, min_samples_split, and min_samples_leaf to obtain the best combination of those parameters. 
+
 random_state=0
 
 
