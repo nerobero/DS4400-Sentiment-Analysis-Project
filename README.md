@@ -29,7 +29,7 @@ For each model, we transformed our training and validation datasets using TfidfV
 For each model, we determined the best min_df value to pass through the TfidfVectorizer. Min_df value is the cut-off frequency value which is used to ignore terms with frequency strictly lower than the given threshold. 
 
 
-MultinomialNB:
+### MultinomialNB:
 We performed cross-validation to determine the best combination of min_df (TfidfVectorizer) and alpha (MultinomialNB) values. This resulted in a min_df value of 0 and an alpha of 0.4, which we proceeded to use for other MultinomialNB models.
 
 
@@ -64,7 +64,7 @@ Logistic Regression:
 
 KNN: 
 
-Decision Tree: 
+Decision Tree: <br />
 Without pruning <br />
 train score: 0.9528867102396514<br />
 validation score: 0.5914071510957324
