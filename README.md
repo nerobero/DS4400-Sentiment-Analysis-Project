@@ -54,9 +54,9 @@ Stemming our training data before vectorization
 
 # Results 
 
-Multinomial NB: 
-Training error: 0.2536043829296425
-Test error: 0.36764705882352944
+Multinomial NB: <br />
+Training error: 0.2536043829296425<br />
+Test error: 0.36764705882352944<br />
 F1 score: 0.4904695785992418
 
 
@@ -65,48 +65,51 @@ Logistic Regression:
 KNN: 
 
 Decision Tree: 
-Without pruning 
-train score: 0.9528867102396514
+Without pruning <br />
+train score: 0.9528867102396514<br />
 validation score: 0.5914071510957324
 
-Best max depth: 10
-Best min samples split: 6
-Best min samples leaf: 3
-Val MSE: 0.8467576573112905
-Train score: 0.5359316929386133
+After cross-validation <br />
+Best max depth: 10 <br />
+Best min samples split: 6 <br />
+Best min samples leaf: 3 <br />
+Val MSE: 0.8467576573112905 <br />
+Train score: 0.5359316929386133 <br />
 Val score: 0.5296360374215046
 
 From the results of our decision tree models, we observe that the model without pruning conditions results in overfitting, as the training set has much higher accuracy than the validation set. After cross-validation and pruning, although the overall accuracy of the model did not improve, we were able to fix the issue of overfitting.
 
 Feature Reduction:
 
-TfidfVectorizer max_features:
-Max features: 1000
-Training error: 0.44934640522875813
-Test error: 0.44928232731000894
+TfidfVectorizer max_features:<br />
+Max features: 1000<br />
+Training error: 0.44934640522875813<br />
+Test error: 0.44928232731000894<br />
 F1 score: 0.24441868774297687
 
-Max features: 5000
-Training error: 0.39462386261694216
-Test error: 0.4119569396386006
-F1 score: 0.35250998376828335
+Max features: 5000<br />
+Training error: 0.39462386261694216<br />
+Test error: 0.4119569396386006<br />
+F1 score: 0.35250998376828335<br />
 
-Max features: 10000
-Training error: 0.3643790849673203
-Test error: 0.3979879533512751
-F1 score: 0.39857440177469183
+Max features: 10000<br />
+Training error: 0.3643790849673203<br />
+Test error: 0.3979879533512751<br />
+F1 score: 0.39857440177469183<br />
 
 From these results, we observe that reducing the number of features after vectorizing comes with the cost of a less accurate model.
 
-Snowball Stemming:
-MultinomialNB:
-Training error: 0.3755847110085865
-Test error: 0.41141227732923236
-F1 score: 0.3597208642444395
 
-kNN:
-Training error: 0.26080513904908365
-Test error: 0.3764898116109189
+Snowball Stemming:
+
+MultinomialNB:<br />
+Training error: 0.3755847110085865<br />
+Test error: 0.41141227732923236<br />
+F1 score: 0.3597208642444395<br />
+
+kNN:<br />
+Training error: 0.26080513904908365<br />
+Test error: 0.3764898116109189<br />
 F1 score: 0.5021483017695451
 
 
