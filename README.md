@@ -3,9 +3,9 @@
 # Introduction 
 Sentiment analysis is relevant to today’s ongoing advancement with natural language processing using machine learning. From a business standpoint, it is helpful to understand user sentiment toward a company’s products. Culturally, it is also vital to comprehend overall sentiment on social media platforms and identify negative users or communities in these spaces. Therefore, for this project, we want to explore multi-class sentiment analysis using three different datasets that cover these sentiment analysis motivations: 
 
-** Rotten Tomatoes Movie Review: https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews/data
-** Amazon Kindle Book Review and Rating: https://www.kaggle.com/datasets/meetnagadia/amazon-kindle-book-review-for-sentiment-analysis 
-** Reddit Comments: https://www.kaggle.com/datasets/cosmos98/twitter-and-reddit-sentimental-analysis-dataset?select=Reddit_Data.csv 
+* Rotten Tomatoes Movie Review: https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews/data
+* Amazon Kindle Book Review and Rating: https://www.kaggle.com/datasets/meetnagadia/amazon-kindle-book-review-for-sentiment-analysis 
+* Reddit Comments: https://www.kaggle.com/datasets/cosmos98/twitter-and-reddit-sentimental-analysis-dataset?select=Reddit_Data.csv 
 
 The goal of this project is to observe the performances of different sentiment analysis models across these different datasets. We plan to compare and contrast different multi-class classification models such as Decision Tree Classifier model, Random Forest Classifier model, k-Nearest Neighbors Classifier model, and Multinomial Naive Bayes model. We also plan to compare the Logistic Regression model with other multi-class classification models using both One-vs-Rest and One-vs-One techniques. 
 
@@ -13,7 +13,7 @@ Both One-vs-Rest (OvR) and One-vs-One (OvO) classification models are heuristic 
 
 # SetUp 
 
-* Rotten Tomatoes Movie Review: 
+### Rotten Tomatoes Movie Review: 
 The dataset is composed of phrases from the Rotten Tomatoes dataset linked above. Each sentence is parsed into multiple phrases by the Stanford parser. Each sentence has its own SentenceId, and each phrase has its own PhraseId. The dataset is divided into two table files: train.tsv and test.tsv. In both datasets, there is a PhraseId, SentenceId, and a Phrase. The difference between train.tsv and test.tsv is that train.tsv contains the phrases with their sentiment labels while test.tsv only contains phrases. 
 
 The sentiment labels are: 
@@ -27,14 +27,14 @@ The bar chart below visualizes the distribution of sentiment labels in our train
 
 ![alt text](https://github.com/nerobero/DS4400-Sentiment-Analysis-Project/blob/main/data_distribution.png)
 
-* Amazon Kindle Book Review: 
+### Amazon Kindle Book Review: 
 The dataset consists of written reviews, the reviewer ID, helpfulness of the review, overall rating score of the product, and other miscellaneous information. We have decided to use the overall rating score as a synonymous feature to sentiment indices from the aforementioned dataset. The overall rating scores range from 1 to 5, 1 meaning poor and 5 meaning excellent. Because the numerical rating scores are related to how negative or positive the reviewers feel about the product, we decided it was fair to use the scores as sentiment index. 
 
 The following bar graph shows the distribution of the overall rating scores for the entire dataset. We can see that generally, we have equal distribution across different scores. Scores of 4 and 5 have a bit higher distribution than the rest, which indicates that we have more positive reviews than negative/neutral reviews in the entire dataset. 
 
 ![alt text](https://github.com/nerobero/DS4400-Sentiment-Analysis-Project/blob/main/amazon_distribution.png)
 
-* Reddit Comments: 
+### Reddit Comments: 
 The dataset consists of two columns, the first column has cleaned tweets and comments from Reddit and the second column indicates its sentimental label. 
 
 The bar chart below visualizes the distribution of sentiment labels in our data. We can see that the sentiment label with the most rows in our training data is positive, while negative reviews appear the least number of times.
@@ -47,7 +47,7 @@ The sentiment labels are:
 
 Utilizing Jupyter Notebook and the NEU Discovery cluster, we begin by reading the respective csv/tsv files for each dataset. We then split the loaded data into testing and validation sets to use on the multi-class classification models listed above. After training each model, predictions and scores are calculated using the validation set to gauge model accuracy.
 
-*TfidfVectorizor
+### TfidfVectorizor
 For each model, we transformed our training and validation datasets using TfidfVectorizer. This tool is widely used in text analyses (which we are conducting a version of) in Python. According to sklearn documentation, raw data, or the sample dataset of sentences, need to be turned into numerical feature vectors before being fed to algorithms. The TfidfVectorizer vectorizes the sample sequence of symbols by tokenizing the strings, counting the occurrences of tokens in each document, and normalizing and weighting the extracted numerical features with diminishing importance tokens. For some models, we determined the best min_df value to pass through the TfidfVectorizer. Min_df value is the cut-off frequency value which is used to ignore terms with frequency strictly lower than the given threshold.
 
 
