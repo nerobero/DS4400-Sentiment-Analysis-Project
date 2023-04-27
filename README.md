@@ -109,44 +109,12 @@ Multinomial NB:
 | Validation Error | 0.36764705882352944 | 0.62958333333 | 0.49449664429 | 
 | F1 Score | 0.4904695785992418 | 0.2641252723792353 | 0.3574286850799983 |
 
-
-* Rotten Tomatoes Movie Review: 
-Training error: 0.2536043829296425
-validation error: 0.36764705882352944
-F1 score: 0.4904695785992418
-
-* Amazon Kindle Book Review and Rating: 
-Training score: 0.6271875
-Val score: 0.37041666666666667
-F1 score: 0.2641252723792353
-
-* Reddit Comments: 
-Training score: 0.710527198899292
-Val score: 0.505503355704698
-F1 score: 0.3574286850799983
-
 Logistic Regression (one vs rest):
 |  | Rotten Tomatoes | Amazon | Reddit | 
 | --- | --- | --- | --- | 
 | Training Error | 0.2886950531846726 | 0.1511458333333333 | 0.09651330581563144 | 
 | Validation Error | 0.36005382545174935 | 0.4816666666666667 | 0.15288590604026842 | 
 | F1 Score | 0.47013799219046853 | 0.4923143078194438 | 0.822511229662286 | 
-
-
-* Rotten Tomatoes Movie Review: 
-train error: 0.2886950531846726
-validation error: 0.36005382545174935
-F1 score: 0.47013799219046853
-
-* Amazon Kindle Book Review and Rating: 
-train error: 0.1511458333333333
-validation error: 0.4816666666666667
-F1 score: 0.4923143078194438
-
-* Reddit Comments: 
-train error: 0.09651330581563144
-validation error: 0.15288590604026842
-F1 score: 0.822511229662286
 
 
 Logistic Regression (one vs one):
@@ -156,45 +124,12 @@ Logistic Regression (one vs one):
 | Validation Error | 0.36184800717672694 | 0.4854166666666667 | 0.16577181208053693 | 
 | F1 Score | 0.4587780704512993 | 0.49426175217768914 | 0.8084570996053896 | 
 
-* Rotten Tomatoes Movie Review: 
-train error: 0.3079584775086506
-validation error: 0.36184800717672694
-F1 score: 0.4587780704512993
-
-* Amazon Kindle Book Review and Rating: 
-train error: 0.2348958333333333
-validation error: 0.4854166666666667
-F1 score: 0.49426175217768914
-
-* Reddit Comments: 
-train error: 0.10527198899291923
-validation error: 0.16577181208053693
-F1 score: 0.8084570996053896
-
 KNN: 
 |  | Rotten Tomatoes | Amazon | Reddit | 
 | --- | --- | --- | --- | 
 | Training Error | 0.26420126874279126 | 0.38687499999999997 | 0.6033088358669754 | 
 | Validation Error | 0.38286556452646414 | 0.59875 | 0.6144966442953019 | 
 | F1 Score | 0.4956557510334359 | 0.40018315108907476 | 0.24177103199322678 | 
-
-* Rotten Tomatoes Movie Review: 
-train error: 0.26420126874279126
-validation error: 0.38286556452646414
-F1 score: 0.4956557510334359
-
-* Amazon Kindle Book Review and Rating: 
-train error: 0.38687499999999997
-validation error: 0.59875
-F1 score: 0.40018315108907476
-
-* Reddit Comments: 
-train error: 0.6033088358669754
-validation error: 0.6144966442953019
-F1 score: 0.24177103199322678
-
-
-
 
 Decision Tree (without pruning): 
 |  | Rotten Tomatoes | Amazon | Reddit | 
@@ -203,47 +138,12 @@ Decision Tree (without pruning):
 | Validation Error | 0.4085928489 | 0.6683333333333333 | 0.23718120805369125 | 
 | F1 Score | N/A | 0.3213731347115591 | 0.7365181115233602 | 
 
-* Rotten Tomatoes Movie Review: 
-train score: 0.9528867102396514
-validation score: 0.5914071510957324
-
-* Amazon Kindle Book Review and Rating: 
-train error: 0.0
-validation error: 0.6683333333333333
-F1 score: 0.3213731347115591
-
-* Reddit Comments: 
-train error: 0.0
-validation error: 0.23718120805369125
-F1 score: 0.7365181115233602
-
 Decision Tree (after cv): 
 |  | Rotten Tomatoes | Amazon | Reddit | 
 | --- | --- | --- | --- | 
 | Training Error | 0.46406830706 | 0.5615625 | 0.3810194972985671 | 
 | Validation Error | 0.47036396257 | 0.65875 | 0.39838926174496647 | 
 | F1 Score | N/A | 0.3226514398180975 | 0.5023933545241343 | 
-
-* Rotten Tomatoes Movie Review: 
-
-Val MSE: 0.8467576573112905
-Train score: 0.5359316929386133
-Val score: 0.5296360374215046
-
-
-* Amazon Kindle Book Review and Rating: 
-
-train error: 0.5615625
-validation error: 0.65875
-F1 score: 0.3226514398180975
-
-* Reddit Comments: 
-
-train error: 0.3810194972985671
-validation error: 0.39838926174496647
-F1 score: 0.5023933545241343
-
-
 
 Random Forest (without pruning): 
 |  | Rotten Tomatoes | Amazon | Reddit | 
@@ -252,49 +152,12 @@ Random Forest (without pruning):
 | Validation Error | 0.35531205946430855 | 0.5608333333333333 | 0.2503355704697987 | 
 | F1 Score | 0.5231793837651512 | 0.39489152061137883 | 0.6569924451222134 | 
 
-
-* Rotten Tomatoes Movie Review: 
-training error: 0.04719338715878507
-validation error: 0.35531205946430855
-F1 score: 0.5231793837651512
-
-* Amazon Kindle Book Review and Rating: 
-train error: 0.0
-validation error: 0.5608333333333333
-F1 score: 0.39489152061137883
-
-* Reddit Comments: 
-train error: 0.0
-validation error: 0.2503355704697987
-F1 score: 0.6569924451222134
-
-
 Random Forest (after cv): 
 |  | Rotten Tomatoes | Amazon | Reddit | 
 | --- | --- | --- | --- | 
 | Training Error | 0.49080481865949 | 0.5871875 | 0.564079331521192 | 
 | Validation Error | 0.4870562604126618 | 0.6658333333333333 | 0.5731543624161074 | 
 | F1 Score | 0.13561475583414512 | 0.19167211201390977 | 0.21309662082016198 | 
-
-
-* Rotten Tomatoes Movie Review: 
-
-train error: 0.49080481865949
-validation error: 0.4870562604126618
-F1 score: 0.13561475583414512
-
-* Amazon Kindle Book Review and Rating: 
-
-train error: 0.5871875
-validation error: 0.6658333333333333
-F1 score: 0.19167211201390977
-
-
-* Reddit Comments: 
-
-train error: 0.564079331521192
-validation error: 0.5731543624161074
-F1 score: 0.21309662082016198
 
 
 From the results of our decision tree/random forest models, we observe that the model without pruning conditions results in overfitting, as the training set has much higher accuracy than the validation set. After cross-validation and pruning, although the overall accuracy of the model does not improve, we are able to fix the issue of overfitting.
