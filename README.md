@@ -174,17 +174,17 @@ Feature Reduction:
 Before feature reduction, we have 93,700 features.
 
 **TfidfVectorizer max_features:**
-* Max features: 1000
+Max features: 1000
  * Training error: 0.44934640522875813
  * Validation error: 0.44928232731000894
  * F1 score: 0.24441868774297687
 
-* Max features: 5000
+Max features: 5000
  * Training error: 0.39462386261694216
  * Validation error: 0.4119569396386006
  * F1 score: 0.35250998376828335
 
-* Max features: 10000
+Max features: 10000
  * Training error: 0.3643790849673203
  * Validation error: 0.3979879533512751
  * F1 score: 0.39857440177469183
