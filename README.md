@@ -208,8 +208,12 @@ This project evaluates the performance of various multi-class classification mod
 
 # Reference 
 https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews/data 
+
 https://www.kaggle.com/datasets/cosmos98/twitter-and-reddit-sentimental-analysis-dataset?select=Reddit_Data.csv 
+
 https://www.kaggle.com/datasets/meetnagadia/amazon-kindle-book-review-for-sentiment-analysis 
+
 https://www.kdnuggets.com/2020/08/one-vs-rest-one-multi-class-classification.html 
+
 https://www.datacamp.com/tutorial/stemming-lemmatization-python
 
