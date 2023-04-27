@@ -170,10 +170,12 @@ Random Forest (after cv):
 
 From the results of our decision tree/random forest models, we observe that the model without pruning conditions results in overfitting, as the training set has much higher accuracy than the validation set. After cross-validation and pruning, although the overall accuracy of the model does not improve, we are able to fix the issue of overfitting.
 
-Feature Reduction:
+## Feature Reduction:
+
 Before feature reduction, we have 93,700 features.
 
 **TfidfVectorizer max_features:**
+
 Max features: 1000
  * Training error: 0.44934640522875813
  * Validation error: 0.44928232731000894
