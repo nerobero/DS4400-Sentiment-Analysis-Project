@@ -29,14 +29,14 @@ The sentiment labels are:
 
 The bar chart below visualizes the distribution of sentiment labels in our training data. We can see that the sentiment label with the most rows in our training data is neutral, while the two extremes, negative and positive reviews, appear the least number of times.
 
-<img src="./data_distribution.png" width=30% height=30%>
+<img src="./data_distribution.png" width=60% height=60%>
 
 ## Amazon Kindle Book Review: 
 The dataset consists of written reviews, the reviewer ID, helpfulness of the review, overall rating score of the product, and other miscellaneous information. We have decided to use the overall rating score as a synonymous feature to sentiment indices from the aforementioned dataset. The overall rating scores range from 1 to 5, 1 meaning poor and 5 meaning excellent. Because the numerical rating scores are related to how negative or positive the reviewers feel about the product, we decided it was fair to use the scores as sentiment index. 
 
 The following bar graph shows the distribution of the overall rating scores for the entire dataset. We can see that generally, we have equal distribution across different scores. Scores of 4 and 5 have a bit higher distribution than the rest, which indicates that we have more positive reviews than negative/neutral reviews in the entire dataset. 
 
-![alt text](https://github.com/nerobero/DS4400-Sentiment-Analysis-Project/blob/main/amazon_distribution.png)
+<img src="./amazon_distribution.png" width=60% height=60%>
 
 ## Reddit Comments: 
 The dataset consists of two columns, the first column has cleaned tweets and comments from Reddit and the second column indicates its sentimental label. 
@@ -44,11 +44,14 @@ The dataset consists of two columns, the first column has cleaned tweets and com
 The bar chart below visualizes the distribution of sentiment labels in our data. We can see that the sentiment label with the most rows in our training data is positive, while negative reviews appear the least number of times.
 
 The sentiment labels are: 
+
 -1 for negative, 
+
 0 for neutral, 
+
 1 for positive
 
-![alt text](https://github.com/nerobero/DS4400-Sentiment-Analysis-Project/blob/main/reddit_distribution.png)
+<img src="./reddit_distribution.png" width=60% height=60%>
 
 Utilizing Jupyter Notebook and the NEU Discovery cluster, we begin by reading the respective csv/tsv files for each dataset. We then split the loaded data into testing and validation sets to use on the multi-class classification models listed above. After training each model, predictions and scores are calculated using the validation set to gauge model accuracy.
 
