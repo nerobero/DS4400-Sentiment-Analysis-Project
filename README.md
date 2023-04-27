@@ -16,6 +16,7 @@ Both One-vs-Rest (OvR) and One-vs-One (OvO) classification models are heuristic 
 The dataset is composed of phrases from the Rotten Tomatoes dataset linked above. Each sentence is parsed into multiple phrases by the Stanford parser. Each sentence has its own SentenceId, and each phrase has its own PhraseId. The dataset is divided into two table files: train.tsv and test.tsv. In both datasets, there is a PhraseId, SentenceId, and a Phrase. The difference between train.tsv and test.tsv is that train.tsv contains the phrases with their sentiment labels while test.tsv only contains phrases. 
 
 The sentiment labels are: 
+
 0 - negative 
 
 1 - somewhat negative
@@ -28,7 +29,7 @@ The sentiment labels are:
 
 The bar chart below visualizes the distribution of sentiment labels in our training data. We can see that the sentiment label with the most rows in our training data is neutral, while the two extremes, negative and positive reviews, appear the least number of times.
 
-![alt text](https://github.com/nerobero/DS4400-Sentiment-Analysis-Project/blob/main/data_distribution.png)
+<img src="./data_distribution.png" width=30% height=30%>
 
 ## Amazon Kindle Book Review: 
 The dataset consists of written reviews, the reviewer ID, helpfulness of the review, overall rating score of the product, and other miscellaneous information. We have decided to use the overall rating score as a synonymous feature to sentiment indices from the aforementioned dataset. The overall rating scores range from 1 to 5, 1 meaning poor and 5 meaning excellent. Because the numerical rating scores are related to how negative or positive the reviewers feel about the product, we decided it was fair to use the scores as sentiment index. 
@@ -101,6 +102,7 @@ Similarly, we first trained a random forest model without setting any parameters
 While training the various models above with the Rotten Tomatoes Reviews, we have observed very slow runtimes, particularly with more complex models such as decision trees and kNN. We hypothesize that since the Rotten Tomatoes dataset is much larger than the other two, we are left with a very large number of features after vectorization, which could be slowing down our models. Therefore, we attempt to perform feature reduction with the following two methods:
 * Setting the max_features parameter in the TfidfVectorizer
 * Stemming our training data before vectorization
+
 Because the other two datasets are comparatively smaller, we have decided feature reduction is not necessary for these datasets. Therefore, we only run these feature reduction steps for the first dataset.
 
 # Results 
@@ -168,7 +170,7 @@ From the results of our decision tree/random forest models, we observe that the 
 Feature Reduction:
 Before feature reduction, we have 93,700 features.
 
-TfidfVectorizer max_features:
+**TfidfVectorizer max_features:**
 * Max features: 1000
  * Training error: 0.44934640522875813
  * Validation error: 0.44928232731000894
@@ -187,6 +189,7 @@ TfidfVectorizer max_features:
 From these results, we observe that reducing the number of features after vectorizing comes with the cost of a less accurate model.
 
 **Snowball Stemming:**
+
 MultinomialNB:
  * Training error: 0.3755847110085865
  * Validation error: 0.41141227732923236
