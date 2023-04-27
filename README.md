@@ -17,9 +17,13 @@ The dataset is composed of phrases from the Rotten Tomatoes dataset linked above
 
 The sentiment labels are: 
 0 - negative 
+
 1 - somewhat negative
+
 2 - neutral
+
 3 - somewhat positive
+
 4 - positive
 
 The bar chart below visualizes the distribution of sentiment labels in our training data. We can see that the sentiment label with the most rows in our training data is neutral, while the two extremes, negative and positive reviews, appear the least number of times.
@@ -165,41 +169,43 @@ Feature Reduction:
 Before feature reduction, we have 93,700 features.
 
 TfidfVectorizer max_features:
-Max features: 1000
-Training error: 0.44934640522875813
-Validation error: 0.44928232731000894
-F1 score: 0.24441868774297687
+* Max features: 1000
+ * Training error: 0.44934640522875813
+ * Validation error: 0.44928232731000894
+ * F1 score: 0.24441868774297687
 
-Max features: 5000
-Training error: 0.39462386261694216
-Validation error: 0.4119569396386006
-F1 score: 0.35250998376828335
+* Max features: 5000
+ * Training error: 0.39462386261694216
+ * Validation error: 0.4119569396386006
+ * F1 score: 0.35250998376828335
 
-Max features: 10000
-Training error: 0.3643790849673203
-Validation error: 0.3979879533512751
-F1 score: 0.39857440177469183
+* Max features: 10000
+ * Training error: 0.3643790849673203
+ * Validation error: 0.3979879533512751
+ * F1 score: 0.39857440177469183
 
 From these results, we observe that reducing the number of features after vectorizing comes with the cost of a less accurate model.
 
-Snowball Stemming:
+**Snowball Stemming:**
 MultinomialNB:
-Training error: 0.3755847110085865
-validation error: 0.41141227732923236
-F1 score: 0.3597208642444395
+ * Training error: 0.3755847110085865
+ * Validation error: 0.41141227732923236
+ * F1 score: 0.3597208642444395
 
 kNN:
-Training error: 0.26080513904908365
-validation error: 0.3764898116109189
-F1 score: 0.5021483017695451
+ * Training error: 0.26080513904908365
+ * validation error: 0.3764898116109189
+ * F1 score: 0.5021483017695451
 
 Using Snowball stemming, we are able to reduce the number of features from 93,700 to 10,450. Additionally, in comparison to the previous method, stemming does not have as much of a negative effect on the accuracy of the model.
 
 
 # Discussion 
 As seen in our results, the model with the best performance, having the highest F1 score with a lower risk of overfitting, is Logistic Regression.  The Logistic Regression model performs substantially better than tree-based models as observed because of the fundamental differences between how the two methods work. Logistic regression estimates the probabilities of having different degrees of sentiment based on the set of text inputs. This enables handling both linear and nonlinear relationships between the input and output. And because text data and sentiment often have non-linear relationships, logistic regression is the best model to work with. 
+
 On the other hand, tree-based models are more prone to overfitting than logistic regression models. These types of models split data into smaller subsets based on features, which, in our case, will result in trees that are way too complex. This is especially so when our vectorizer increases the number of features prior to fitting the vectorized data into these models. Not only does it make the models more prone to overfitting, but it also fails to consider the aforementioned nonlinear relationships between text and sentiment.
 In addition, the Amazon Kindle Book Review and Reddit Comment datasets are comparatively smaller than the Rotten Tomatoes Movie Review dataset, which means there is less data to train the models. This serves as more evidence of overfitting not only with the tree-based methods but also with the Multinomial Naive Bayes model. 
+
 The performance of the k-nearest neighbors (KNN) model is mediocre relative to that of other models discussed. This model is not as prone to overfitting as the tree-based models, but it still has a lower performance score than the Logistic Regression model. We analyze this to be true due to the way classifications are made in the KNN model. KNN uses Euclidean distance between data points to make classifications. Using Euclidean distance to determine whether reviews using starkly different vocabularies express the same sentiment may not be the best measure, for they may have a large distance between them despite having the same sentiment.
 
 # Conclusion 
